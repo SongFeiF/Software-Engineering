@@ -14,31 +14,14 @@ import java.util.TreeMap;
 import java.util.Map.Entry;
 
 public class SortResult 
-{
-	
-	//Õ≥º∆∏ﬂ∆µ¥ 
-	public void SortHigh(Map<String,Integer> oldmap,int n){  
-        ArrayList<Map.Entry<String,Integer>> list = new ArrayList<Map.Entry<String,Integer>>(oldmap.entrySet());
-        
-        Collections.sort(list,new Comparator<Map.Entry<String,Integer>>(){  
-            @Override  
-            public int compare(Entry<String, Integer> o1, Entry<String, Integer> o2) {  
-                return o2.getValue() - o1.getValue();  //Ωµ–Ú  
-            }  
-        }); 
-        
-        for(int i = 0; i<n; i++){  
-            System.out.println(list.get(i).getKey()+ ": " +list.get(i).getValue());  
-        }     
-    }
-	
-	//∞¥◊÷µ‰ ‰≥ˆ
+{	
+	//ÊåâÂ≠óÂÖ∏ËæìÂá∫
 	public void Sort(Map<String, Integer> Map){  
 		
         Set<Entry<String,Integer>> map = Map.entrySet();    
         LinkedList<Entry<String, Integer>> List = new LinkedList<Entry<String,Integer>>(map);
         
-        //≈≈–Ú
+        //ÊéíÂ∫è
         Collections.sort(List, new Comparator<Entry<String,Integer>>() {  
             @Override  
             public int compare(Entry<String, Integer> wk1,  Entry<String, Integer> wk2) {
